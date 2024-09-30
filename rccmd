@@ -1,0 +1,17 @@
+kubectl create -f rc.yaml
+kubectl get deployment
+kubectl get pods
+kubectl get rs
+kubectl describe deployment hello-dep
+# update the image
+kubectl set image deployment/hello-dep hello-dep=amitow/nginx:v2
+# Check rollout status
+kubectl rollout status deployment/hello-dep
+#Rollout history
+kubectl rollout history deployment/hello-dep
+#roll back
+kubectl rollout undo deployment/hello-dep --to-revision=1
+#scaleup
+kubectl scale deployment/hello-dep --replicas=10
+#delete
+kubectl delete deployment.apps/hello-dep
