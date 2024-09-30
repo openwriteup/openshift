@@ -1,0 +1,17 @@
+kubectl create -f ru.yaml
+kubectl get deployment
+kubectl get pods
+kubectl get rs
+kubectl describe deployment hello-rcp
+# update the image
+ kubectl set image deployment/hello-rcp hello-dep=amitow/nginx:v2
+# Check rollout status
+kubectl rollout status deployment/hello-rcp
+#Rollout history
+kubectl rollout history deployment/hello-rcp
+#roll back
+ kubectl rollout undo deployment/hello-rcp --to-revision=1
+#scaleup
+ kubectl scale deployment/hello-rcp --replicas=10
+#delete
+ kubectl delete deployment.apps/hello-rcp
