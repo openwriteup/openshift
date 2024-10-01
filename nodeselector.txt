@@ -1,0 +1,23 @@
+
+step 1.For example, let's say you want to label a node with the key-value pair `app=backend`:
+
+kubectl label nodes <node-name> app=backend
+
+
+
+Step 2: Define the Node Selector in the pod specification
+Next, you need to define the Node Selector in the pod specification to indicate which nodes the pod should be scheduled on. Here's an example:
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: my-container
+      image: my-image
+  nodeSelector:
+    app: backend
+
+

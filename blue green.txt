@@ -1,0 +1,3 @@
+blue green
+
+https://medium.com/@muppedaanvesh/blue-green-deployment-in-kubernetes-76f9153e0805

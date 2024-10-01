@@ -1,0 +1,1 @@
+https://edwin.baculsoft.com/2022/05/canary-deployment-with-openshift-4-route/#:~:text=Doing%20a%20Canary%20deployment%20using,Green%20deployment%2C%20and%20Canary%20deployment.

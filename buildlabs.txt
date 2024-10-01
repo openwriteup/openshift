@@ -1,0 +1,19 @@
+1)Create a image stream nodejs-8-centos7
+
+quay.io/ckongman/nodejs-8-centos7
+
+
+2) Go to buildconfig and provide git repo
+
+https://github.com/sclorg/nodejs-ex.git
+
+3) Select the imagestream tag for source and push both
+
+
+4) oc new-build https://github.com/openshift/ruby-hello-world -n amitproj #provide your namespace
+
+5) # Create a build config that gets its input from a remote repository and another Docker image
+  oc new-build https://github.com/openshift/ruby-hello-world --source-image=openshift/jenkins-1-centos7 --source-image-path=/var/lib/jenkins:tmp
+
+
+
